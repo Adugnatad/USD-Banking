@@ -1,0 +1,6 @@
+{
+  "name": "EthioGlobal Elite Banking",
+  "description": "Empowering the Ethiopian diaspora with premium financial tools, seamless global USD accounts, and exclusive travel benefits.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
