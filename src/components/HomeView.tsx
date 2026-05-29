@@ -27,7 +27,7 @@ export default function HomeView({
         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <h1 className="text-5xl lg:text-7xl font-extrabold font-headline leading-[1.1] text-on-background tracking-tight">
-              Spend <span className="text-primary">Globally</span>,<br />
+              Spend <span className="text-[#217dff]">Globally</span>,<br />
               Grow Locally.
             </h1>
             <p className="text-xl text-on-surface-variant leading-relaxed max-w-xl">
