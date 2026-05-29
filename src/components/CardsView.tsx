@@ -63,7 +63,7 @@ export default function CardsView({ onNavigate }: CardsViewProps) {
               Standard Membership
             </span>
             <h3 className="text-3xl font-extrabold font-headline">
-              Elite Standard Card
+              Standard Card
             </h3>
             <p className="text-on-surface-variant text-sm">
               Digital-first daily essentials for global payments. Convert USD to
@@ -141,7 +141,7 @@ export default function CardsView({ onNavigate }: CardsViewProps) {
               Travel &amp; Mile Elite
             </span>
             <h3 className="text-3xl font-extrabold font-headline">
-              Elite Voyager Card
+              Digital Nomad Card
             </h3>
             <p className="text-on-surface-variant text-sm">
               Tailored for premium frequent flyers. Earn double ShebaMiles
@@ -171,7 +171,7 @@ export default function CardsView({ onNavigate }: CardsViewProps) {
                 style={{ transform: "translateZ(20px)" }}
               >
                 <span className="text-sm font-bold tracking-wider uppercase font-headline">
-                  ELITE VOYAGER
+                  DIGITAL NOMAD
                 </span>
                 <span className="material-symbols-outlined text-2xl text-[#E9C400]">
                   flight_takeoff
@@ -219,7 +219,7 @@ export default function CardsView({ onNavigate }: CardsViewProps) {
               <tr className="border-b border-slate-100 text-outline uppercase font-semibold text-xs tracking-wider">
                 <th className="pb-4">Features Overview</th>
                 <th className="pb-4">Elite Standard</th>
-                <th className="pb-4">Elite Voyager</th>
+                <th className="pb-4">Digital Nomad</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">

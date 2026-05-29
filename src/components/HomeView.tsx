@@ -63,7 +63,7 @@ export default function HomeView({
                   <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full -mr-24 -mt-24 blur-2xl"></div>
                   <div className="flex justify-between items-start">
                     <span className="text-2xl font-bold font-headline">
-                      ELITE VOYAGER
+                      DIGITAL NOMAD
                     </span>
                     <span className="material-symbols-outlined text-3xl">
                       contactless

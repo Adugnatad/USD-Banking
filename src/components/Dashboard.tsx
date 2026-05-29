@@ -34,7 +34,7 @@ interface VirtualCard {
   expiry: string;
   holder: string;
   color: "gold" | "charcoal" | "indigo" | "emerald";
-  cardType: "Elite Standard" | "Elite Voyager";
+  cardType: "Elite Standard" | "Digital Nomad";
   status: "active" | "frozen";
   createdAt: string;
 }
@@ -96,7 +96,7 @@ export default function Dashboard({
       expiry: "09/30",
       holder: "Abraham T. Getahun",
       color: "charcoal",
-      cardType: "Elite Voyager",
+      cardType: "Digital Nomad",
       status: "active",
       createdAt: "May 12, 2026",
     },
@@ -176,8 +176,8 @@ export default function Dashboard({
     "gold" | "charcoal" | "indigo" | "emerald"
   >("charcoal");
   const [newCardType, setNewCardType] = useState<
-    "Elite Standard" | "Elite Voyager"
-  >("Elite Voyager");
+    "Elite Standard" | "Digital Nomad"
+  >("Digital Nomad");
 
   const activeCard = cards.find((c) => c.id === selectedCardId) || cards[0];
 
@@ -261,7 +261,7 @@ export default function Dashboard({
       return;
     }
 
-    const price = newCardType === "Elite Voyager" ? 15.0 : 5.0;
+    const price = newCardType === "Digital Nomad" ? 15.0 : 5.0;
     if (usdBalance < price) {
       alert(
         `Insufficient USD balance to pay the $${price} registration & network fee.`,
@@ -1193,8 +1193,8 @@ export default function Dashboard({
                             fee: "$5 fee",
                           },
                           {
-                            key: "Elite Voyager",
-                            label: "Elite Voyager",
+                            key: "Digital Nomad",
+                            label: "Digital Nomad",
                             fee: "$15 fee",
                           },
                         ].map((tier) => (
@@ -1225,7 +1225,7 @@ export default function Dashboard({
                     className="w-full py-3 bg-[#006dda] hover:bg-[#005ab4] text-slate-950 font-bold rounded-xl text-xs uppercase tracking-wider transition-colors cursor-pointer"
                   >
                     Pay &amp; Deploy Card (Fee: $
-                    {newCardType === "Elite Voyager" ? "15.00" : "5.00"})
+                    {newCardType === "Digital Nomad" ? "15.00" : "5.00"})
                   </button>
                 </form>
               )}

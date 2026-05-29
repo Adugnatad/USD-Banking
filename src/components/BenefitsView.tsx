@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ActiveView, MileTransaction } from "../types";
+import { Button } from "./ui/button";
+import { Card } from "./ui/card";
 
 interface BenefitsViewProps {
   milesBalance: number;
@@ -58,6 +60,97 @@ export default function BenefitsView({
     },
   ];
 
+  const coWorkingSpaces = [
+    {
+      name: "Aurora Coworking",
+      miles: "500 Miles",
+      description:
+        "Earn miles for monthly memberships and day passes at our premium co-working locations.",
+      image: "Aurora_Coworking.png",
+    },
+    {
+      name: "BlueSpace Ethiopia",
+      miles: "450 Miles",
+      description:
+        "Get rewarded for your productivity with miles on every membership tier upgrade.",
+      image: "BlueSpace_Coworking.png",
+    },
+    {
+      name: "Ice Addis",
+      miles: "600 Miles",
+      description:
+        "Dedicated desk and office space packages earn premium miles for business growth.",
+      image: "Ice_Addis_Cowork.png",
+    },
+    {
+      name: "Creative Hub",
+      miles: "520 Miles",
+      description:
+        "Tech-focused co-working with meeting rooms and events membership benefits.",
+      image: "Creative_Hub_Cowork.png",
+    },
+  ];
+
+  const foreignDestinations = {
+    africa: [
+      {
+        country: "Kenya",
+        duration: "Visa-free 90 days",
+        note: "EA hub, tech scene",
+      },
+      {
+        country: "Rwanda",
+        duration: "Visa on arrival / eVisa",
+        note: "90 days",
+      },
+      { country: "Ghana", duration: "Visa on arrival", note: "30 days" },
+      { country: "Senegal", duration: "Visa on arrival", note: "1 month" },
+      { country: "Gambia", duration: "Visa-free 90 days", note: "" },
+      {
+        country: "Seychelles",
+        duration: "Free permit on arrival",
+        note: "3 months, ET direct",
+      },
+      { country: "Djibouti", duration: "Visa-free 90 days", note: "Neighbour" },
+      { country: "Mauritius", duration: "Visa on arrival", note: "60 days" },
+      { country: "Tanzania", duration: "Visa on arrival / eVisa", note: "" },
+      { country: "Comoros", duration: "Visa on arrival", note: "45 days" },
+    ],
+    asiaPacific: [
+      {
+        country: "Singapore",
+        duration: "Visa-free 30 days",
+        note: "Global digital hub",
+      },
+      { country: "Philippines", duration: "Visa-free 30 days", note: "" },
+      {
+        country: "Thailand",
+        duration: "eVisa / Visa on arrival",
+        note: "15 days",
+      },
+      {
+        country: "Maldives",
+        duration: "Free visa on arrival",
+        note: "30 days",
+      },
+      {
+        country: "Cambodia",
+        duration: "eVisa / Visa on arrival",
+        note: "30 days",
+      },
+      { country: "Laos", duration: "eVisa / Visa on arrival", note: "30 days" },
+      { country: "Palau", duration: "Free visa on arrival", note: "30 days" },
+      { country: "Sri Lanka", duration: "eTA on arrival", note: "" },
+    ],
+    europe: [
+      { country: "Turkey", duration: "eVisa", note: "90 days" },
+      { country: "Georgia", duration: "Visa-free", note: "365 days" },
+      { country: "Albania", duration: "Visa-free", note: "1 year" },
+      { country: "Kosovo", duration: "Visa-free", note: "1 year" },
+      { country: "Bosnia", duration: "Visa-free", note: "90 days" },
+    ],
+  };
+
   const handleLink = (e: React.FormEvent) => {
     e.preventDefault();
     if (memberIdInput.trim()) {
@@ -113,7 +206,7 @@ export default function BenefitsView({
       </div>
 
       {/* Main Grid: Balance & Tracker + Link Account */}
-      <div className="grid lg:grid-cols-3 gap-8">
+      <div className="grid  gap-8">
         {/* Balance Card */}
         <div className="lg:col-span-2 bg-[#001D34] text-white rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between h-80 shadow-xl">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,90,180,0.45)_0%,transparent_70%)]"></div>
@@ -187,9 +280,188 @@ export default function BenefitsView({
                     {offer.description}
                   </p>
                 </div>
+                <div className="mt-4 flex items-center justify-between gap-3">
+                  <Button
+                    onClick={() => setSelectedOffer(offer)}
+                    className={`w-full py-2 font-bold rounded-xl transition-all ${isAffordable ? "bg-primary text-on-primary hover:bg-primary-container" : "bg-surface-container text-on-surface opacity-60 cursor-not-allowed"}`}
+                    disabled={!isAffordable}
+                  >
+                    {isAffordable ? "Redeem" : "Insufficient Miles"}
+                  </Button>
+                </div>
               </div>
             );
           })}
+        </div>
+      </div>
+
+      {/* Co-Working Space Partners - NEW SECTION */}
+      <div className="mb-12">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">
+              Co-Working Space Partners
+            </h2>
+            <p className="text-sm text-gray-600 mt-1">
+              Earn miles for every co-working membership and office space
+              booking
+            </p>
+          </div>
+          <span className="text-sm text-primary font-semibold hover:underline cursor-pointer">
+            View All Partners
+          </span>
+        </div>
+        <div className="grid gap-6 md:grid-cols-4 sm:grid-cols-2">
+          {coWorkingSpaces.map((space, idx) => (
+            <Card
+              key={idx}
+              className="overflow-hidden border-gray-200 hover:shadow-lg transition-shadow flex flex-col"
+            >
+              <div className="relative h-40 bg-gray-200 overflow-hidden">
+                <img
+                  src={`/assets/${space.image}`}
+                  alt={space.name}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <p className="text-xs font-semibold uppercase tracking-wide mb-1">
+                  {space.name}
+                </p>
+                <p className="text-base font-bold text-emerald-600 mb-3">
+                  {space.miles}
+                </p>
+                <p className="text-sm text-gray-600 leading-relaxed flex-1">
+                  {space.description}
+                </p>
+                <Button className="mt-4 w-full">Learn More</Button>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      {/* International Destinations */}
+      <div className="mb-12 -mx-6 px-6 py-12 bg-gradient-to-b from-slate-900 to-slate-800 text-white rounded-lg">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="mb-12">
+            <p className="text-sm font-semibold text-cyan-400 uppercase tracking-widest mb-2">
+              INTERNATIONAL REWARDS
+            </p>
+            <div className="max-w-2xl">
+              <h2 className="text-4xl font-bold mb-3">Explore the World.</h2>
+              <p className="text-gray-300 leading-relaxed">
+                Your Fly Rewards card opens doors to 40+ destinations worldwide.
+                Enjoy visa-free or easy visa access to some of the world&apos;s
+                most exciting destinations.
+              </p>
+            </div>
+          </div>
+
+          {/* Visa Stats */}
+          <div className="grid grid-cols-4 gap-4 mb-12">
+            <div className="bg-green-600 rounded-lg p-6">
+              <p className="text-3xl font-bold mb-1">12</p>
+              <p className="text-sm font-semibold opacity-90">
+                Visa-Free Countries
+              </p>
+            </div>
+            <div className="bg-cyan-600 rounded-lg p-6">
+              <p className="text-3xl font-bold mb-1">18</p>
+              <p className="text-sm font-semibold opacity-90">
+                Visa on Arrival
+              </p>
+            </div>
+            <div className="bg-yellow-500 rounded-lg p-6">
+              <p className="text-3xl font-bold mb-1">8</p>
+              <p className="text-sm font-semibold opacity-90">
+                eVisa Available
+              </p>
+            </div>
+            <div className="bg-blue-600 rounded-lg p-6">
+              <p className="text-3xl font-bold mb-1">5</p>
+              <p className="text-sm font-semibold opacity-90">Europe Access</p>
+            </div>
+          </div>
+
+          {/* Africa Region */}
+          <div className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-1 w-16 bg-cyan-500 rounded-full"></div>
+              <h3 className="text-2xl font-bold">Africa</h3>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+              {foreignDestinations.africa.map((dest, idx) => (
+                <div
+                  key={idx}
+                  className="bg-slate-700/50 border border-slate-600 hover:border-cyan-500 rounded-lg p-4 transition-all hover:shadow-lg hover:shadow-cyan-500/10"
+                >
+                  <p className="font-semibold text-white mb-1">
+                    {dest.country}
+                  </p>
+                  <p className="text-sm text-cyan-400 font-semibold mb-2">
+                    {dest.duration}
+                  </p>
+                  {dest.note && (
+                    <p className="text-xs text-gray-400">{dest.note}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Asia & Pacific Region */}
+          <div className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-1 w-16 bg-orange-500 rounded-full"></div>
+              <h3 className="text-2xl font-bold">Asia & Pacific</h3>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              {foreignDestinations.asiaPacific.map((dest, idx) => (
+                <div
+                  key={idx}
+                  className="bg-slate-700/50 border border-slate-600 hover:border-orange-500 rounded-lg p-4 transition-all hover:shadow-lg hover:shadow-orange-500/10"
+                >
+                  <p className="font-semibold text-white mb-1">
+                    {dest.country}
+                  </p>
+                  <p className="text-sm text-orange-400 font-semibold mb-2">
+                    {dest.duration}
+                  </p>
+                  {dest.note && (
+                    <p className="text-xs text-gray-400">{dest.note}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Europe Region */}
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-1 w-16 bg-purple-500 rounded-full"></div>
+              <h3 className="text-2xl font-bold">Europe</h3>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+              {foreignDestinations.europe.map((dest, idx) => (
+                <div
+                  key={idx}
+                  className="bg-slate-700/50 border border-slate-600 hover:border-purple-500 rounded-lg p-4 transition-all hover:shadow-lg hover:shadow-purple-500/10"
+                >
+                  <p className="font-semibold text-white mb-1">
+                    {dest.country}
+                  </p>
+                  <p className="text-sm text-purple-400 font-semibold mb-2">
+                    {dest.duration}
+                  </p>
+                  {dest.note && (
+                    <p className="text-xs text-gray-400">{dest.note}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
