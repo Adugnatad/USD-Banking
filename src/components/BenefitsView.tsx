@@ -96,58 +96,168 @@ export default function BenefitsView({
       {
         country: "Kenya",
         duration: "Visa-free 90 days",
-        note: "EA hub, tech scene",
+        description:
+          "Enjoy seamless travel to Nairobi and Mombasa with your Fly Rewards card.",
+        Tags: "EA hub, tech scene",
       },
       {
         country: "Rwanda",
         duration: "Visa on arrival / eVisa",
-        note: "90 days",
+        description:
+          "Experience the beauty of Rwanda with your Fly Rewards card.",
+        Tags: "90 days",
       },
-      { country: "Ghana", duration: "Visa on arrival", note: "30 days" },
-      { country: "Senegal", duration: "Visa on arrival", note: "1 month" },
-      { country: "Gambia", duration: "Visa-free 90 days", note: "" },
+      {
+        country: "Ghana",
+        duration: "Visa on arrival",
+        description:
+          "Explore the vibrant culture and rich history of Ghana with your Fly Rewards card.",
+        Tags: "30 days",
+      },
+      {
+        country: "Senegal",
+        duration: "Visa on arrival",
+        description:
+          "Discover the rich cultural heritage and vibrant markets of Senegal with your Fly Rewards card.",
+        Tags: "1 month",
+      },
+      {
+        country: "Gambia",
+        duration: "Visa-free 90 days",
+        description:
+          "Explore the lush landscapes and historical sites of Gambia with your Fly Rewards card.",
+        Tags: "90 days",
+      },
       {
         country: "Seychelles",
         duration: "Free permit on arrival",
-        note: "3 months, ET direct",
+        description:
+          "Paradise permit on arrival. ET flies direct. 3 months of turquoise water and fast hotel WiFi — the ultimate aspirational workation.",
+        Tags: "3 months, ET direct",
       },
-      { country: "Djibouti", duration: "Visa-free 90 days", note: "Neighbour" },
-      { country: "Mauritius", duration: "Visa on arrival", note: "60 days" },
-      { country: "Tanzania", duration: "Visa on arrival / eVisa", note: "" },
-      { country: "Comoros", duration: "Visa on arrival", note: "45 days" },
+      {
+        country: "Djibouti",
+        duration: "Visa-free 90 days",
+        description:
+          "Experience the strategic crossroads of Africa and Asia with your Fly Rewards card.",
+        Tags: "90 days",
+      },
+      {
+        country: "Mauritius",
+        duration: "Visa on arrival",
+        description:
+          "Enjoy pristine beaches and diverse cultural experiences in Mauritius with your Fly Rewards card.",
+        Tags: "60 days",
+      },
+      {
+        country: "Tanzania",
+        duration: "Visa on arrival / eVisa",
+        description:
+          "Discover the stunning natural wonders and wildlife of Tanzania with your Fly Rewards card.",
+        Tags: "90 days",
+      },
+      {
+        country: "Comoros",
+        duration: "Visa on arrival",
+        description:
+          "Experience the untouched beauty and unique culture of the Comoros Islands with your Fly Rewards card.",
+        Tags: "45 days",
+      },
     ],
     asiaPacific: [
       {
         country: "Singapore",
         duration: "Visa-free 30 days",
-        note: "Global digital hub",
+        description:
+          "Experience the vibrant culture and modern amenities of Singapore with your Fly Rewards card.",
+        Tags: "Global digital hub",
       },
-      { country: "Philippines", duration: "Visa-free 30 days", note: "" },
+      {
+        country: "Philippines",
+        duration: "Visa-free 30 days",
+        description:
+          "Explore the beautiful archipelago and warm hospitality of the Philippines with your Fly Rewards card.",
+        Tags: "30 days",
+      },
       {
         country: "Thailand",
         duration: "eVisa / Visa on arrival",
-        note: "15 days",
+        description:
+          "Discover the rich culture and stunning landscapes of Thailand with your Fly Rewards card.",
+        Tags: "15 days",
       },
       {
         country: "Maldives",
         duration: "Free visa on arrival",
-        note: "30 days",
+        description:
+          "Relax in paradise with your Fly Rewards card - visa-free access to the Maldives.",
+        Tags: "30 days",
       },
       {
         country: "Cambodia",
         duration: "eVisa / Visa on arrival",
-        note: "30 days",
+        description:
+          "Uncover ancient temples and rich history in Cambodia with your Fly Rewards card.",
+        Tags: "30 days",
       },
-      { country: "Laos", duration: "eVisa / Visa on arrival", note: "30 days" },
-      { country: "Palau", duration: "Free visa on arrival", note: "30 days" },
-      { country: "Sri Lanka", duration: "eTA on arrival", note: "" },
+      {
+        country: "Laos",
+        duration: "eVisa / Visa on arrival",
+        description:
+          "Experience the serene landscapes and spiritual temples of Laos with your Fly Rewards card.",
+        Tags: "30 days",
+      },
+      {
+        country: "Palau",
+        duration: "Free visa on arrival",
+        description:
+          "Discover world-class diving and pristine tropical beauty in Palau with your Fly Rewards card.",
+        Tags: "30 days",
+      },
+      {
+        country: "Sri Lanka",
+        duration: "eTA on arrival",
+        description:
+          "Explore the stunning landscapes and rich heritage of Sri Lanka with your Fly Rewards card.",
+        Tags: "30 days",
+      },
     ],
     europe: [
-      { country: "Turkey", duration: "eVisa", note: "90 days" },
-      { country: "Georgia", duration: "Visa-free", note: "365 days" },
-      { country: "Albania", duration: "Visa-free", note: "1 year" },
-      { country: "Kosovo", duration: "Visa-free", note: "1 year" },
-      { country: "Bosnia", duration: "Visa-free", note: "90 days" },
+      {
+        country: "Turkey",
+        duration: "eVisa",
+        description:
+          "Bridge two continents and experience the rich history of Turkey with your Fly Rewards card.",
+        Tags: "90 days",
+      },
+      {
+        country: "Georgia",
+        duration: "Visa-free",
+        description:
+          "Discover the majestic Caucasus Mountains and warm hospitality of Georgia with your Fly Rewards card.",
+        Tags: "365 days",
+      },
+      {
+        country: "Albania",
+        duration: "Visa-free",
+        description:
+          "Explore the unspoiled coastlines and historic cities of Albania with your Fly Rewards card.",
+        Tags: "1 year",
+      },
+      {
+        country: "Kosovo",
+        duration: "Visa-free",
+        description:
+          "Experience the vibrant culture and emerging tech scene of Kosovo with your Fly Rewards card.",
+        Tags: "1 year",
+      },
+      {
+        country: "Bosnia",
+        duration: "Visa-free",
+        description:
+          "Immerse yourself in the diverse culture and historical heritage of Bosnia with your Fly Rewards card.",
+        Tags: "90 days",
+      },
     ],
   };
 
@@ -403,8 +513,17 @@ export default function BenefitsView({
                   <p className="text-sm text-cyan-400 font-semibold mb-2">
                     {dest.duration}
                   </p>
-                  {dest.note && (
-                    <p className="text-xs text-gray-400">{dest.note}</p>
+                  <p className="text-xs text-gray-400 mb-2">
+                    {dest.description}
+                  </p>
+                  {dest.Tags && (
+                    <p className="text-xs text-gray-400">{dest.Tags}</p>
+                  )}
+                  {dest.duration.includes("eVisa") && (
+                    <button className="text-xs text-cyan-400 font-semibold mt-2 flex items-center gap-1 hover:gap-2 transition-all">
+                      {dest.country} eVisa
+                      <span>→</span>
+                    </button>
                   )}
                 </div>
               ))}
@@ -429,8 +548,17 @@ export default function BenefitsView({
                   <p className="text-sm text-orange-400 font-semibold mb-2">
                     {dest.duration}
                   </p>
-                  {dest.note && (
-                    <p className="text-xs text-gray-400">{dest.note}</p>
+                  <p className="text-xs text-gray-400 mb-2">
+                    {dest.description}
+                  </p>
+                  {dest.Tags && (
+                    <p className="text-xs text-gray-400">{dest.Tags}</p>
+                  )}
+                  {dest.duration.includes("eVisa") && (
+                    <button className="text-xs text-orange-500 font-semibold mt-2 flex items-center gap-1 hover:gap-2 transition-all">
+                      {dest.country} eVisa
+                      <span>→</span>
+                    </button>
                   )}
                 </div>
               ))}
@@ -455,8 +583,17 @@ export default function BenefitsView({
                   <p className="text-sm text-purple-400 font-semibold mb-2">
                     {dest.duration}
                   </p>
-                  {dest.note && (
-                    <p className="text-xs text-gray-400">{dest.note}</p>
+                  <p className="text-xs text-gray-400 mb-2">
+                    {dest.description}
+                  </p>
+                  {dest.Tags && (
+                    <p className="text-xs text-gray-400">{dest.Tags}</p>
+                  )}
+                  {dest.duration.includes("eVisa") && (
+                    <button className="text-xs text-purple-500 font-semibold mt-2 flex items-center gap-1 hover:gap-2 transition-all">
+                      {dest.country} eVisa
+                      <span>→</span>
+                    </button>
                   )}
                 </div>
               ))}
@@ -465,67 +602,92 @@ export default function BenefitsView({
         </div>
       </div>
 
-      {/* Recent Earnings Table */}
-      <div className="bg-white rounded-3xl p-8 border border-outline-variant/30 shadow-sm">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-          <h3 className="text-2xl font-bold font-headline text-on-surface">
-            Mile Activity History
+      {/* Miles Mechanics Table */}
+      <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-lg p-8 -mx-6 border border-slate-700/50 shadow-lg">
+        <div className="mb-8">
+          <h3 className="text-3xl font-bold text-white mb-2">
+            Miles Mechanics
           </h3>
-          <button
-            onClick={() => onNavigate("load")}
-            className="flex items-center gap-2 px-4 py-2 border border-outline-variant text-[13px] font-bold rounded-xl text-on-surface hover:bg-surface-container transition-colors cursor-pointer"
-          >
-            <span className="material-symbols-outlined text-lg">
-              local_mall
-            </span>
-            Transfer Points
-          </button>
+          <p className="text-sm text-slate-400">
+            A customer receiving $1,500/month accumulates ~10,000 miles in 6
+            months — enough for a domestic award ticket.
+          </p>
         </div>
 
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-outline-variant/30 text-xs font-semibold text-on-surface-variant uppercase tracking-wider">
-                <th className="py-4">Transaction Details</th>
-                <th className="py-4">Source Category</th>
-                <th className="py-4 text-right">Loyalty Points</th>
+              <tr className="border-b border-slate-700/50 text-xs font-semibold text-slate-300 uppercase tracking-wider">
+                <th className="py-4 text-slate-400">Activity</th>
+                <th className="py-4 text-slate-400">Miles Earned</th>
+                <th className="py-4 text-slate-400">Why</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-outline-variant/10 text-sm">
-              {transactions.map((t) => (
+            <tbody className="divide-y divide-slate-700/30">
+              {[
+                {
+                  id: "fx_payment",
+                  description: "FX payment received (per $100)",
+                  display: "150 miles",
+                  why: "Incentivizes using Coop as primary FX account",
+                  color: "text-emerald-400",
+                },
+                {
+                  id: "card_international",
+                  description: "Card spend — international (per $10)",
+                  display: "20 miles",
+                  why: "Aligns with prepaid card structure",
+                  color: "text-emerald-400",
+                },
+                {
+                  id: "card_local",
+                  description: "Card spend — local POS (per 100 ETB)",
+                  display: "6 miles",
+                  why: "Consistent with Awash co-brand benchmark",
+                  color: "text-emerald-400",
+                },
+                {
+                  id: "coworking",
+                  description: "Coworking partner payment (monthly)",
+                  display: "500 bonus miles",
+                  why: "Drives partner merchant POS usage",
+                  color: "text-amber-400",
+                },
+                {
+                  id: "et_flight",
+                  description: "ET domestic flight booked",
+                  display: "2× status miles",
+                  why: "Builds tier status faster — accelerates loyalty",
+                  color: "text-amber-400",
+                },
+                {
+                  id: "referral",
+                  description: "New member referral",
+                  display: "1,000 miles",
+                  why: "Viral growth mechanism in tech communities",
+                  color: "text-cyan-400",
+                },
+                {
+                  id: "first_activation",
+                  description: "First card activation",
+                  display: "500 welcome miles",
+                  why: "Low cost, high conversion incentive",
+                  color: "text-cyan-400",
+                },
+              ].map((t) => (
                 <tr
                   key={t.id}
-                  className="hover:bg-slate-50/50 transition-colors"
+                  className="hover:bg-slate-800/50 transition-colors"
                 >
-                  <td className="py-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-on-surface-variant">
-                        <span className="material-symbols-outlined text-lg">
-                          {t.icon}
-                        </span>
-                      </div>
-                      <div>
-                        <p className="font-bold text-on-surface text-sm">
-                          {t.description}
-                        </p>
-                        <p className="text-xs text-outline font-medium">
-                          {t.date}
-                        </p>
-                      </div>
-                    </div>
+                  <td className="py-4 text-slate-200 font-medium">
+                    {t.description}
                   </td>
                   <td className="py-4">
-                    <span className="px-2.5 py-1 text-xs font-semibold capitalize bg-surface-container text-on-surface-variant rounded-full">
-                      {t.type}
+                    <span className={`font-bold text-lg ${t.color}`}>
+                      {t.display}
                     </span>
                   </td>
-                  <td
-                    className={`py-4 text-right font-bold font-mono text-sm ${t.amount >= 0 ? "text-emerald-600" : "text-rose-500"}`}
-                  >
-                    {t.amount >= 0
-                      ? `+${t.amount.toLocaleString()}`
-                      : t.amount.toLocaleString()}
-                  </td>
+                  <td className="py-4 text-slate-400 text-sm">{t.why}</td>
                 </tr>
               ))}
             </tbody>
