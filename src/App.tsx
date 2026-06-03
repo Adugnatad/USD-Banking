@@ -7,6 +7,9 @@ import CardsView from "./components/CardsView";
 import LoadFundsView from "./components/LoadFundsView";
 import OpenAccountView from "./components/OpenAccountView";
 import Dashboard from "./components/Dashboard";
+import BecomePartnerPage from "./components/BecomePartner";
+import CoworkingPartnerPage from "./components/BecomePartnerCoworking";
+import LodgePartnerPage from "./components/BecomePartnerLodge";
 
 type ViewPath =
   | "home"
@@ -237,10 +240,10 @@ export default function App() {
 
             {/* Core Apply CTA button */}
             <button
-              onClick={() => navTo("open-account")}
+              onClick={() => navTo("become-partner")}
               className="bg-slate-100 hover:bg-slate-200 text-[#001D34] px-4 py-2 rounded-lg text-sm font-bold font-headline border border-slate-200 transition-all cursor-pointer"
             >
-              Apply Portal
+              Become Partner
             </button>
 
             {/* Mobile Menu Toggle button */}
@@ -418,14 +421,26 @@ export default function App() {
             }
           />
           <Route path="/dashboard" element={<Dashboard onNavigate={navTo} />} />
+          <Route
+            path="/become-partner"
+            element={<BecomePartnerPage onNavigate={navTo} />}
+          />
+          <Route
+            path="/become-partner-coworking"
+            element={<CoworkingPartnerPage onNavigate={navTo} />}
+          />
+          <Route
+            path="/become-partner-hotel"
+            element={<LodgePartnerPage onNavigate={navTo} />}
+          />
         </Routes>
       </main>
 
       {/* Global Brand Footer */}
-      <footer className="w-full bg-[#001D34] text-white py-16 px-6 lg:px-12 mt-16 border-t border-white/10">
+      <footer className="w-full bg-[#001D34] text-white py-8 px-6 lg:px-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto space-y-12">
           {/* Copyright rules line */}
-          <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-white/5 text-xs text-white/40 font-light gap-4">
+          <div className="flex flex-col sm:flex-row justify-between items-center pt-8  text-xs text-white/40 font-light gap-4">
             <p>© 2026 Cooperative Bank of Oromia. All rights reserved.</p>
             <div className="flex gap-6">
               <a

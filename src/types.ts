@@ -5,7 +5,10 @@ export type ActiveView =
   | "load"
   | "open-account"
   | "login"
-  | "Dashboard";
+  | "Dashboard"
+  | "become-partner"
+  | "become-partner-coworking"
+  | "become-partner-hotel";
 
 export interface MileTransaction {
   id: string;
